@@ -47,7 +47,7 @@ export const SearchForm = () => {
         <button type='submit'>Search</button>
     </form>
     {/* Draw a Card Waits for the API to Load */}
-    {!apiResponse ? <p>Draw a card</p> : null} 
+    {!apiResponse ? <p>Tudor for a card</p> : null} 
     {apiResponse && apiResponse.map((card) => {
         return (
             <SearchedCards card={card} key={card.id} />
