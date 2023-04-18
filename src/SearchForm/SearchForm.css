@@ -1,0 +1,11 @@
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.cardSize{
+    display: flex;
+    max-height: 50%;
+    max-width: auto;
+}

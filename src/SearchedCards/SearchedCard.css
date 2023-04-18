@@ -1,0 +1,47 @@
+.card,
+.flexBoxRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    z-index: 1;
+}
+.cardOracle{
+    max-width: 40%;
+}
+  
+  .flexBoxLeft{
+    display: flex;
+    width: 40%;
+    position: relative; /* add position property */
+    }
+  
+  .flexBoxRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    transform: translateX(-100%); /* hide content initially */
+    transition: transform 0.3s ease;
+    flex-wrap: wrap;
+  }
+
+  .flexBoxRight > * {
+    flex-basis: auto; /* Set flex-basis to 100% for uniform size */
+  }
+  
+  img {
+    width: 66%;
+    height: auto;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .card:hover img {
+    transform: scale(1.1); /* scale up image on hover */
+  }
+  .flexBoxLeft:hover + .flexBoxRight, .flexBoxRight:hover {
+    transform: translateX(0); /* reveal content on hover */
+  }

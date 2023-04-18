@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 
+import './SearchForm.css'
+
 import { SearchedCards } from '../SearchedCards/SearchedCards';
 
 export const SearchForm = () => {
@@ -47,12 +49,16 @@ export const SearchForm = () => {
         <button type='submit'>Search</button>
     </form>
     {/* Draw a Card Waits for the API to Load */}
-    {!apiResponse ? <p>Tudor for a card</p> : null} 
-    {apiResponse && apiResponse.map((card) => {
-        return (
-            <SearchedCards card={card} key={card.id} />
-        )
-    })}
+    {!apiResponse ? <p>Tutor for a card</p> : null} 
+    <div className="list">
+        {apiResponse && apiResponse.map((card) => {
+            return (
+                <div className="cardSize">
+                    <SearchedCards card={card} key={card.id} />
+                </div>
+            )
+        })}
+    </div>
     </>
   )
 }
