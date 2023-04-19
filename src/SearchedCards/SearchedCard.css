@@ -1,6 +1,7 @@
 img{
     width: 99%;
     height: 99%;
+
 }
 
 p{
@@ -8,6 +9,7 @@ p{
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 6; /* number of lines to show */
+    padding: 0px 5px 3px 5px;
 }
 
 .card{
@@ -21,7 +23,7 @@ p{
     max-height: 233px;
     object-fit: contain;
     top: 0;
-    left: 0;
+    left: 0;   
 }
 
 .flexBoxRight {
@@ -32,9 +34,9 @@ p{
     z-index: -1;
     position: absolute;
     overflow: hidden;
-    background-color: rgba(184, 182, 182, 0.4);
+    background-color: rgba(184, 182, 182, 0.1);
 }
-.card:hover img {
+.card:hover .flexBoxLeft {
     transition: transform 0.2s;
     transform: scale(1.1); /* scale up image on hover */
 }

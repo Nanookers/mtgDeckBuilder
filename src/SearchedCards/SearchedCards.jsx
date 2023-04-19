@@ -12,7 +12,10 @@ export const SearchedCards = ({card}) => {
         <div className="flexBoxRight">
             <h2>{card.name}</h2>
                 <div className="cardOracle">
-                    <p>{card.oracle_text}</p>
+                    {/* If the card has no ability, it renders the flavor text in italics*/}
+                    <p style={{fontStyle: card.oracle_text ? 'normal' : 'italic'}}>
+                        {card.oracle_text ? card.oracle_text : card.flavor_text}
+                    </p>
                 </div>
         </div>
     </div>
