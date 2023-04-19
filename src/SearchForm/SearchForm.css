@@ -1,11 +1,23 @@
 .list {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
     flex-wrap: wrap;
 }
+
 .cardSize{
     display: flex;
-    max-height: 25%;
-    max-width: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.searchButton{
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: tran;
+    cursor: pointer;
+    transition: border-color 0.25s;
 }
