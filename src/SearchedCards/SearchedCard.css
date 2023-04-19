@@ -1,7 +1,8 @@
 img{
     width: 99%;
     height: 99%;
-
+    box-shadow: 1px 1px 10px rgba(85, 85, 85, 0.5);
+    z-index: 1;
 }
 
 p{
@@ -12,18 +13,61 @@ p{
     padding: 0px 5px 3px 5px;
 }
 
+.AddButtonStyling{
+    font-size: 5em;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+.buttonAdd {
+    position: absolute;
+    bottom: -5%;
+    left: 70%;
+    cursor: pointer;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    border-left: 0;
+    border-right: 0;
+}
+.buttonAdd::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+  }
+  .buttonAdd::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 40px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+  }
+
 .card{
     display: flex;
     flex-direction: row;
-    position: relative;
+    padding: 1em;
+    position: relative
 }
 
 .flexBoxLeft{
+    position: relative;
     max-width: 319px;
     max-height: 233px;
     object-fit: contain;
     top: 0;
-    left: 0;   
+    left: 0; 
+    z-index: 1;  
 }
 
 .flexBoxRight {
@@ -34,15 +78,16 @@ p{
     z-index: -1;
     position: absolute;
     overflow: hidden;
-    background-color: rgba(184, 182, 182, 0.1);
+    background: linear-gradient(to left, rgba(156, 156, 156, 0.6), rgba(164, 164, 164, 0.6));
 }
+
 .card:hover .flexBoxLeft {
     transition: transform 0.2s;
     transform: scale(1.1); /* scale up image on hover */
 }
 
 .card:hover .flexBoxRight{
-    transition: transform 0.2s;
+    transition: transform 0.4s;
     transform: scale(1.1) translateX(319px);
     
 }

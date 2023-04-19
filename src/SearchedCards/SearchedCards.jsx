@@ -2,12 +2,15 @@ import React from 'react'
 import './SearchedCard.css'
 
 export const SearchedCards = ({card}) => {
-    // This Maps through the list of objects, if the card is found,  
+    // This Maps through the list of objects, if the card is found, 
+    const addToDeck = (event) => {
+        console.log(card.id);
+    } 
   return (
     <div className="card">
         <div className="flexBoxLeft">
             <img src={card.image_uris.art_crop} alt={card.name} />
-            {/* This will also have buttons */}
+            <button class="buttonAdd" onClick={addToDeck} />
         </div>
         <div className="flexBoxRight">
             <h2>{card.name}</h2>

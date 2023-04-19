@@ -46,9 +46,11 @@ export const SearchForm = () => {
                 placeholder='Search Card'
                     value={cardToSearch}
                         onChange={handleSearchInput}/>
-        <button type='submit'>Search</button>
+        <div className="searchButton">
+            <button type='submit'>Search</button>
+        </div>
     </form>
-    {/* Draw a Card Waits for the API to Load */}
+    {/* Tutor for a card Waits for the API to Load */}
     {!apiResponse ? <p>Tutor for a card</p> : null} 
     <div className="list">
         {apiResponse && apiResponse.map((card) => {
