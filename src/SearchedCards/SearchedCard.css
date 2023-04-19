@@ -3,8 +3,28 @@ img{
     height: 99%;
 }
 
+.card{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
 .flexBoxLeft{
     max-width: 319px;
     max-height: 233px;
     object-fit: contain;
+    top: 0;
+    left: 0;
 }
+
+.flexBoxRight {
+    max-width: 319px;
+    max-height: 233px;
+    object-fit: contain;
+    z-index: -1;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+

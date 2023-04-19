@@ -1,11 +1,6 @@
 .list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
-}
-.cardSize{
-    display: flex;
-    max-height: 25%;
-    max-width: auto;
 }
