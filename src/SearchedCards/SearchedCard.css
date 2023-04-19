@@ -3,6 +3,13 @@ img{
     height: 99%;
 }
 
+p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 6; /* number of lines to show */
+}
+
 .card{
     display: flex;
     flex-direction: row;
@@ -18,13 +25,23 @@ img{
 }
 
 .flexBoxRight {
-    max-width: 319px;
-    max-height: 233px;
-    object-fit: contain;
+    width: 315px;
+    height: 230px;
+    max-width: 100%;
+    max-height: 100%;
     z-index: -1;
     position: absolute;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+    background-color: rgba(184, 182, 182, 0.4);
+}
+.card:hover img {
+    transition: transform 0.2s;
+    transform: scale(1.1); /* scale up image on hover */
+}
+
+.card:hover .flexBoxRight{
+    transition: transform 0.2s;
+    transform: scale(1.1) translateX(319px);
+    
+}
 
