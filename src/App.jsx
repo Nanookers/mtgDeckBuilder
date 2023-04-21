@@ -1,19 +1,17 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import { useSelector } from 'react-redux'
 import { SearchForm } from './SearchForm/SearchForm'
 
-// SDK MTG INSTALL
+
 
 function App() {
-
-
+  
   return (
-    <div className="App">
-      <SearchForm />
-    </div>
+    // Wrap your component tree with Provider and pass the store as a prop
+      <div className="App">
+        <SearchForm />
+      </div>
   )
 }
 

@@ -1,16 +1,25 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import './SearchedCard.css'
 
+import { addCard } from '../reducers';
+
+
 export const SearchedCards = ({card}) => {
-    // This Maps through the list of objects, if the card is found, 
+
+    const dispatch = useDispatch();
+
     const addToDeck = (event) => {
-        console.log(card.id);
-    } 
+        let cardId = card.id
+        dispatch(addCard({ id: cardId}))
+    };
+    
   return (
     <div className="card">
         <div className="flexBoxLeft">
             <img src={card.image_uris.art_crop} alt={card.name} />
-            <button class="buttonAdd" onClick={addToDeck} />
+            <button className="buttonAdd" onClick={addToDeck} />
         </div>
         <div className="flexBoxRight">
             <h2>{card.name}</h2>

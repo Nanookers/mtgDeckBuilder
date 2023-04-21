@@ -1,12 +1,15 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-
 import './SearchForm.css'
-
+import { cardDeckSlice } from '../reducers';
 import { SearchedCards } from '../SearchedCards/SearchedCards';
+import { useSelector } from 'react-redux';
+
 
 export const SearchForm = () => {
 
+    const deck = useSelector(state => state.cardDeck)
+    console.log(deck);
     // This Sets the search bar.
     const [cardToSearch, setCardToSearch] = useState('')
 

@@ -41,6 +41,7 @@ p{
     height: 5px;
     background-color: white;
     transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   .buttonAdd::after {
     content: "";
@@ -51,6 +52,7 @@ p{
     height: 40px;
     background-color: white;
     transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
 .card{
