@@ -1,11 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { deckReducer } from './reducers'
+import counterReducer from './reducers'
 
-export default  configureStore({
+export default configureStore({
   reducer: {
-    cardDeck: deckReducer,
+    counter: counterReducer
   }
 })
-
-
-

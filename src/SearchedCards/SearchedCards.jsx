@@ -3,16 +3,17 @@ import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import './SearchedCard.css'
 
-import { addCard } from '../reducers';
+
 
 
 export const SearchedCards = ({card}) => {
 
     const dispatch = useDispatch();
 
+
+
     const addToDeck = (event) => {
         let cardId = card.id
-        dispatch(addCard({ id: cardId}))
     };
     
   return (
