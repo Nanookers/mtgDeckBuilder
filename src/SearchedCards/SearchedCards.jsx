@@ -4,12 +4,7 @@ import { useDispatch } from 'react-redux';
 import './SearchedCard.css'
 
 
-
-
 export const SearchedCards = ({card}) => {
-
-    const dispatch = useDispatch();
-
 
 
     const addToDeck = (event) => {

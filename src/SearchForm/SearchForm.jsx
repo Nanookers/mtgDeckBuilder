@@ -1,15 +1,15 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import './SearchForm.css'
-import store from '../store';
+
 
 import { SearchedCards } from '../SearchedCards/SearchedCards';
-
+import {CardNameSearch} from '../NewSearch/CardNameSearch'
 
 
 export const SearchForm = () => {
 
-    console.log(store.getState());
+  
 
     // This Sets the search bar.
     const [cardToSearch, setCardToSearch] = useState('')
@@ -59,9 +59,12 @@ export const SearchForm = () => {
     <div className="list">
         {apiResponse && apiResponse.map((card) => {
             return (
-                <div className="cardSize">
-                    <SearchedCards card={card} key={card.id} />
-                </div>
+                <dl>
+                    <div className="cardSize">
+                        {/* <SearchedCards card={card} key={card.id} /> */}
+                       <dt> <CardNameSearch card={card}/> </dt> 
+                    </div>
+                </dl>
             )
         })}
     </div>
