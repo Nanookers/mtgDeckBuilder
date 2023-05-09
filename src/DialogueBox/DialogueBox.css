@@ -1,0 +1,14 @@
+
+.dialogueBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Commonly used to center elements regardless of size */
+    transform: translate(-50%, -50%);
+
+    width: 350px;
+    height: 280px;
+    padding: 30px 20px;
+
+    background-color: antiquewhite;
+}

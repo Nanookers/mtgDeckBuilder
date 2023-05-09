@@ -2,9 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import './SearchForm.css'
 
-
-import { SearchedCards } from '../SearchedCards/SearchedCards';
-import {CardNameSearch} from '../NewSearch/CardNameSearch'
+import { DialogueBox } from '../DialogueBox/DialogueBox';
 
 
 export const SearchForm = () => {
@@ -68,6 +66,7 @@ export const SearchForm = () => {
             )
         })}
     </div>
+    <DialogueBox/>
     </>
   )
 }
